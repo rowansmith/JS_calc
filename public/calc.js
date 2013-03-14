@@ -1,129 +1,99 @@
-  globalAns = '';
-  var num1;
-  var num2;
-  num = [];
-function aFunction(number)
-{           
-var source = event.target || event.srcElement;
-//source.value stores the value of the key that was pressed
-globalAns = globalAns + source.value;
-document.getElementById('ans_field').value = globalAns;
-}
 
-function addition()
-{
+
+globalAns = "";
+
+num1 = void 0;
+
+num2 = void 0;
+
+num = [];
+
+function aFunction() {
+  var source;
+  source = event.target || event.srcElement;
+  globalAns = globalAns + source.value;
+  return document.getElementById("ans_field").value = globalAns;
+};
+
+function addition() {
+  var operand;
   operand = "add";
-  document.getElementById('ans_field').value = 0;
+  document.getElementById("ans_field").value = 0;
   num1 = globalAns;
-  globalAns = "";
-}
+  return globalAns = "";
+};
 
-function subtraction()
-{
-  operand = "subtract"; 
-  document.getElementById('ans_field').value = 0;
+function subtraction() {
+  var operand;
+  operand = "subtract";
+  document.getElementById("ans_field").value = 0;
   num1 = globalAns;
-  globalAns = "";
-}
+  return globalAns = "";
+};
 
-function multiply()
-{
-  operand = "multiply"; 
-  document.getElementById('ans_field').value = 0
+function multiply() {
+  var operand;
+  operand = "multiply";
+  document.getElementById("ans_field").value = 0;
   num1 = globalAns;
-  globalAns = "";
-}
+  return globalAns = "";
+};
 
-function divide()
-{
-  operand = "divide"; 
-  document.getElementById('ans_field').value = 0
+function divide() {
+  var operand;
+  operand = "divide";
+  document.getElementById("ans_field").value = 0;
   num1 = globalAns;
+  return globalAns = "";
+};
+
+function equal() {
+  if (operand == "add") {
+    num1 = num1 * 1;
+    globalAns = globalAns * 1;
+    globalAns = num1 + globalAns;
+  }
+  if (operand == "subtract") {
+    globalAns = num1 - globalAns;
+    document.getElementById("ans_field").value = globalAns;
+  }
+  if (operand == "multiply") {
+    globalAns = num1 * globalAns;
+    document.getElementById("ans_field").value = globalAns;
+  }
+  if (operand == "divide") {
+    globalAns = num1 / globalAns;
+    return document.getElementById("ans_field").value = globalAns;
+  }
+};
+
+function cancel() {
   globalAns = "";
-}
+  return document.getElementById("ans_field").value = "";
+};
 
-function equal()
-{
-if (operand == "add")
-    {
-        //ADD
-        num1 = num1*1;
-        globalAns = globalAns*1;
-        globalAns = num1 + globalAns;
-    }
-if (operand == "subtract")
-    {
-        //SUBTRACT
-        globalAns = num1 - globalAns;
-    }
-    document.getElementById('ans_field').value = globalAns;
-    
-if (operand == "multiply")
-    {
-        //multiply
-        globalAns = num1 * globalAns;
-    }
-    document.getElementById('ans_field').value = globalAns;
-    
-if (operand == "divide")
-    {
-        //divide
-        globalAns = num1 / globalAns;
-    }
-    document.getElementById('ans_field').value = globalAns;
-}
+function plusMinus() {
+  var pn;
+  pn = num1 *= -1;
+  document.getElementById("ans_field").value = pn;
+  return globalAns = pn;
+};
 
-
-function cancel() 
-// Sets the value of globalAns to zero
-{
-   globalAns = "";
-   document.getElementById('ans_field').value = "";         
-}
-
-function plus_minus() 
-// Multiplies the current number by minus 1 to change the current number between negative and positive
-{
-    pn = num1 *= -1;
-    document.getElementById('ans_field').value = pn;
-    globalAns = pn;
-} 
-
-function squareRoot() 
-// Uses a built in function to work out the square root of the current number 
-{
-    //globalAns = document.getElementById('ans_field').value;
-    //globalAns = (Math.sqrt(globalAns));
-    //document.getElementById('ans_field').value = globalAns; 
-    
-    document.getElementById('ans_field').value = (Math.sqrt(document.getElementById('ans_field').value));
-    
-    // This line is created so that in each intance-thus you will see it at the end of each function, the answer that the user gets can then be used straight away to do another calculation
-}
+function squareRoot() {
+  return document.getElementById("ans_field").value = Math.sqrt(document.getElementById("ans_field").value);
+};
 
 function clear_e() {
-   //ce = document.getElementById('cc').value.substring(0, document.getElementById('ans_field').value.length - 1);
-   ce = document.getElementById('ans_field').value = '';
-   globalAns = ce; 
- }
-function plusMinus() {
-  document.getElementById('ans_field').value = document.getElementById('ans_field').value * -1;
-   }
+  return globalAns = document.getElementById("ans_field").value = "";
+};
 
- /**
-  * Remove the last number entered
-  *          
-  * //sydwells code         
-    globalAns = document.getElementById('ans_field').value;
-    var len =  globalAns.length -1;
-    globalAns = globalAns.substring(0, len);
-    document.getElementById('ans_field').value = globalAns;   
-  */
-       
- function backspace()
- //make sure i have the right value - own code
- {
-   bkspace = document.getElementById('ans_field').value.substring(0, document.getElementById('ans_field').value.length - 1);
-   document.getElementById('ans_field').value = bkspace;
-   globalAns = bkspace; 
- }
+function plusMinus() {
+  return document.getElementById("ans_field").value = document.getElementById("ans_field").value * -1;
+};
+
+function backspace() {
+  var bkspace;
+  bkspace = document.getElementById("ans_field").value.substring(0, document.getElementById("ans_field").value.length - 1);
+  document.getElementById("ans_field").value = bkspace;
+  return globalAns = bkspace;
+};
