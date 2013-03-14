@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel='stylesheet' href='style.css' type='text/css' />
+        <script type='text/javascript' src='calc.js'></script>
+    </head>
+    <body>
+        <div>
+            <h1>The Basic Calculator</h1>
+            <table>
+                <tr>
+                    <td colspan="5"><input type="text" style="width:220px; text-align:right;" name="Ans_box" id="ans_field" value="0" /></td>
+                </tr>
+                <tr>                 
+                    <td><input id="back" type="button" onclick="backspace()" value="<" style="color:blue;" /></td>
+                    <td><input id="ce" type="reset" onclick="clear_e()" value="CE" name="CE" style="color:blue;"/></td>
+                    <td><input id="c" type="reset" onclick="cancel()" value="C" name="C" style="color:blue;"/></td>
+                    <td><input id="plusminus" type="button" onclick="plus_minus" value="&plusmn;" style="color:blue;"/></td>
+                    <td><input id="square" type="button" onclick="square_root" value="&radic;" style="color:blue;"/></td>
+                </tr>
+                <tr>
+                    <td><input id="n7" type="button" onclick="aFunction(7)" value="7" /></td>
+                    <td><input id="n8" type="button" onclick="aFunction(8)" value="8" /></td>
+                    <td><input id="n9" type="button" onclick="aFunction(9)" value="9" /></td>
+                    <td><input id="divide" onclick="divide()" type="button" value="/" style="color:blue;"/></td>
+                    <td><input id="percent" type="button" value="%" style="color:blue;"/></td>
+                </tr>
+                <tr>
+                    <td><input id="n4" type="button" onclick="aFunction(4)" value="4" /></td>
+                    <td><input id="n5" type="button" onclick="aFunction(5)" value="5" /></td>
+                    <td><input id="n6" type="button" onclick="aFunction(6)" value="6" /></td>
+                    <td><input id="multiply" onclick="multiply()" type="button" value="*" style="color:blue;"/></td>
+                    <td><input id="dno" type="button" value="1/x" style="color:blue;"/></td>
+                </tr>
+                <tr>
+                    <td><input id="n1" type="button" onclick="aFunction(1)" value="1" /></td>
+                    <td><input id="n2" type="button" onclick="aFunction(2)" value="2" /></td>
+                    <td><input id="n3" type="button" onclick="aFunction(3)" value="3" /></td>
+                    <td><input id="subtract" type="button" onclick="subtraction()" value="-" style="color:blue;"/></td>
+                    <td rowspan="2"><input id="equal" type="button" onclick="equal()" value="=" style="height:55px; color:blue;" /></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><input id="n0" type="button" onclick="aFunction()" value="0" style="width:85px;"/></td>
+                    <td><input id="comma" type="button" onclick="aFunction()" value="." /></td>
+                    <td><input id="addi" type="button" onclick="addition()" value="+" style="color:blue;"/></td>
+                    
+                </tr>
+            </table>
+        </div>
+    </body>
+</html>
